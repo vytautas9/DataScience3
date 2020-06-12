@@ -52,3 +52,4 @@ copy <- reshape2::melt(data = copy, id = c("SubjectNum", "Activity"))
 copy <- reshape2::dcast(data = copy, SubjectNum + Activity ~ variable, fun.aggregate = mean)
 
 fwrite(copy, "tidyData.txt")
+write.table(copy, "tidyData1.txt", row.names = FALSE)
